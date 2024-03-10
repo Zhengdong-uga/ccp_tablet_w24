@@ -1,0 +1,214 @@
+body {
+    background-color: #181717;
+    color: #c0c0c0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+
+}
+
+/* skip to main content invisible*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+}
+
+/* navigation center */
+nav ul {
+    padding: 10;
+    margin: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a.active {
+    color: #fff; /* Active link color */
+    background-color: linear-gradient(#49708f, #293f50); 
+    font-weight: bold;
+}
+
+/* Photo grid for travel(1) and pets(2) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    /* Make images fill their container */
+    height: 100%;
+    display: block;
+    /* Remove default inline behavior */
+}
+
+.gallery-grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+
+}
+
+.gallery-grid2 img {
+    width: 100%;
+    /* Make images fill their container */
+    height: 100%;
+    display: block;
+    /* Remove default inline behavior */
+}
+
+/* main */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #000000;
+    /* Slightly lighter background for content */
+
+}
+
+h1 {
+    margin: 20px;
+}
+
+h1,
+h2,
+h3 {
+    color: #fd6c64;
+}
+
+h1,
+h2 {
+    font-size: 30px;
+
+}
+
+h3 {
+    font-size: 20px;
+
+}
+
+p {
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border: 3px solid #ff2d20;
+    /* Neon border for images */
+    box-shadow: 0 0 10px #ff2d20;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #ff2d20;
+    color: #1a1a1a;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #ff2d20;
+}
+
+nav ul {
+    padding: 15 30;
+    margin: 0 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Photo grid to 2x2 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    /* Make images fill their container */
+    height: 100%;
+    display: block;
+    /* Remove default inline behavior */
+}
+
+
+/* Media query for mobile devices */
+@media (min-width: 540px) {
+    body {
+        font-size: 22px;
+    }
+
+    h1, h2, h3 {
+        font-size: 24px; 
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    nav ul li a {
+        font-size: 22px;
+    }
+    .gallery-grid, .gallery-grid2 {
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* Media query for Tablet devices */
+@media (min-width: 768px) {
+    body {
+        font-size: 20px; 
+    }
+
+    h1, h2, h3 {
+        font-size: 28px; 
+    }
+
+    .gallery-grid, .gallery-grid2 {
+        grid-template-columns: 1fr 1fr; /* Adjust grid columns for better spacing */
+    }
+
+    
+    main {
+        max-width: 90%; /* Allows for some margin on larger tablets */
+        margin: 40px auto; /* More vertical space, centered layout */
+        padding: 30px; /* Increased padding for content breathing room */
+        background-color: #222;
+    }
+
+    nav ul li a {
+        padding: 10px 20px; /* Increase padding for easier tapping */
+    }
+
+    
+    
+
+    
+}
